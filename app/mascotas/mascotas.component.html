@@ -1,0 +1,19 @@
+<h2>Mis Mascotas</h2>
+<div>
+  <label>Nombre mascota:
+    <input #mascotaName />
+  </label>
+  <button (click)="add(mascotaName.value); mascotaName.value=''">
+    Adicionar
+  </button>
+</div>
+ 
+<ul class="mascotas">
+  <li *ngFor="let mascota of mascotas">
+    <a routerLink="/detail/{{mascota.id}}">
+      <span class="badge">{{mascota.id}}</span> {{mascota.name}}
+    </a>
+    <button class="delete" title="delete mascota"
+      (click)="delete(mascota)">x</button>
+  </li>
+</ul>

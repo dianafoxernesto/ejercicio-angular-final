@@ -1,0 +1,14 @@
+<div *ngIf="mascota">
+
+  <h2>Detalle de {{mascota.name | uppercase}}</h2>
+  <div><span>id: </span>{{mascota.id}}</div>
+  <div>
+    <label>nombre:
+      <input [(ngModel)]="mascota.name" placeholder="nombre"/>
+    </label>
+  </div>
+
+  <button (click)="goBack()">Inicio</button>
+  <button (click)="save()">Guardar</button>
+
+</div>
